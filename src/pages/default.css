@@ -1,0 +1,50 @@
+.default_card {
+    background-color: white;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 4px #0a0a09;
+    width: 620px;
+    height: 748px;
+    margin-left: 852px;
+    margin-top: 100px;
+    border-radius: 15px;
+    box-shadow: 0 10px 8px 0 rgba(29, 28, 28, 0.2),
+      0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    padding: 78px;
+    font-size: 30px;
+    color: black;
+  }
+  .padding2{
+    padding: 19px;
+    font-size: 30px;
+    font-family: Geneva, Tahoma, sans-serif;
+    display: flex;
+    text-align: center;
+  }
+  .Address_padding{
+margin-left: 152px;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: rgb(31, 138, 17); 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #f8fcf9;
+    color: rgb(2, 2, 2);
+  }
