@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #dff3f7;
   min-height: 50vh;
@@ -49,14 +38,12 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-
 }
 
 .button1 {
   background-color: white;
   color: black;
   border: 2px solid #4caf50;
-
 }
 
 .button1:hover {
@@ -155,60 +142,62 @@
 table {
   border-collapse: collapse;
   width: 100%;
-  
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 50px;
   /* font-size: 500px; */
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
 th {
-  background-color: #73c6f4bd;;
+  background-color: #73c6f4bd;
   color: white;
   font-size: 50px;
 }
-#light{
-  background-color: #dff3f7
+#light {
+  background-color: #dff3f7;
 }
-#lightmode{
+#lightmode {
   background-color: white;
-  color:black
+  color: black;
 }
-#dark{
+#dark {
   background-color: rgb(13, 21, 65);
 }
-#dark .default_card{
+#dark .default_card {
   background-color: rgb(74, 74, 74);
   color: white;
 }
-#light .ul{
-  background-color: #77aeb1;}
-#dark .card{
-  background-color: rgb(105 110 110);
-  box-shadow: 0 10px 8px 0 rgba(14, 13, 13, 0.945),
-  0 6px 30px 0 rgb(19, 18, 18);
+#light .ul {
+  background-color: #77aeb1;
 }
-#light .card{
+#dark .card {
+  background-color: rgb(105 110 110);
+  box-shadow: 0 10px 8px 0 rgba(14, 13, 13, 0.945), 0 6px 30px 0 rgb(19, 18, 18);
+}
+#light .card {
   background-color: rgb(253, 253, 253);
 }
 
-#dark .main_div{
+#dark .main_div {
   background-color: rgb(39, 39, 39);
 }
-#dark .font{
+#dark .font {
   color: white;
 }
-#dark .padding1{
+#dark .padding1 {
   color: white;
 }
-#dark .heading_reg{
+#dark .heading_reg {
   color: white;
 }
-#dark .homeh1{
+#dark .homeh1 {
   color: rgb(228, 25, 25);
 }
 .default_card {
@@ -227,18 +216,18 @@ th {
   font-size: 30px;
   color: black;
 }
-.padding2{
+.padding2 {
   padding: 19px;
   font-size: 30px;
   font-family: Geneva, Tahoma, sans-serif;
   display: flex;
   text-align: center;
 }
-.Address_padding{
-margin-left: 152px;
+.Address_padding {
+  margin-left: 152px;
 }
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
   border: none;
   color: white;
   padding: 16px 32px;
@@ -252,9 +241,9 @@ margin-left: 152px;
 }
 
 .button1 {
-  background-color: rgb(31, 138, 17); 
-  color: black; 
-  border: 2px solid #4CAF50;
+  background-color: rgb(31, 138, 17);
+  color: black;
+  border: 2px solid #4caf50;
 }
 
 .button1:hover {
@@ -268,7 +257,6 @@ ul {
   overflow: hidden;
   border: 1px solid #e7e7e7;
   background-color: #3b3737;
-
 }
 
 li {
@@ -289,50 +277,47 @@ li a:hover:not(.active) {
 
 li a.active {
   color: white;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
 }
 .default_div {
   background-color: rgb(218, 34, 34);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
-border-bottom: solid 4px #0a0a09;
-width: 620px;
-height: 148px;
-margin-left: 20px;
-margin-top: 100px;
-border-radius: 15px;
-box-shadow: 0 10px 8px 0 rgba(29, 28, 28, 0.2),
-  0 6px 30px 0 rgba(0, 0, 0, 0.19);
-display: inline-block;
-padding: 78px;
-font-size: 30px;
-color: rgb(189, 44, 44);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 4px #0a0a09;
+  width: 620px;
+  height: 148px;
+  margin-left: 20px;
+  margin-top: 100px;
+  border-radius: 15px;
+  box-shadow: 0 10px 8px 0 rgba(29, 28, 28, 0.2),
+    0 6px 30px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  padding: 78px;
+  font-size: 30px;
+  color: rgb(189, 44, 44);
 }
-.toggle_switch{
+.toggle_switch {
   margin-right: 2451px;
   /* width: 50px; */
   font-size: 30px;
-  color: white
-                                                                                 ;
+  color: white;
 }
 /* .toggle_switch label{
   margin:10px
 } */
-#dark .switch_font{
+#dark .switch_font {
   color: white;
-
 }
-#lightmode .switch_font{
+#lightmode .switch_font {
   color: rgb(3, 3, 3);
-
 }
-#dark .input{
-    width: 300px;
-    height: 0px;
-    background-color: rgb(20 18 18);
-    margin-left: 90px;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px 0 rgb(231 220 220 / 41%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-    font-size: 20px;
-    color:white
+#dark .input {
+  width: 300px;
+  height: 0px;
+  background-color: rgb(20 18 18);
+  margin-left: 90px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgb(231 220 220 / 41%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  font-size: 20px;
+  color: white;
 }
