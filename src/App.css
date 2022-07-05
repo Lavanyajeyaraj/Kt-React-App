@@ -15,14 +15,14 @@
 
 .App-header {
   background-color: #dff3f7;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(0px + 2vmin);
   color: white;
-  padding: 100px;
+  padding: 138.5px;
 }
 
 .App-link {
@@ -49,12 +49,14 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+
 }
 
 .button1 {
   background-color: white;
   color: black;
   border: 2px solid #4caf50;
+
 }
 
 .button1:hover {
@@ -91,6 +93,12 @@
   display: block ruby;
 }
 .heading_reg {
+  margin-top: -30px;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+.contact {
   margin-top: -30px;
   color: black;
   text-align: center;
@@ -166,8 +174,16 @@ th {
 #light{
   background-color: #dff3f7
 }
+#lightmode{
+  background-color: white;
+  color:black
+}
 #dark{
   background-color: rgb(13, 21, 65);
+}
+#dark .default_card{
+  background-color: rgb(74, 74, 74);
+  color: white;
 }
 #light .ul{
   background-color: #77aeb1;}
@@ -179,6 +195,7 @@ th {
 #light .card{
   background-color: rgb(253, 253, 253);
 }
+
 #dark .main_div{
   background-color: rgb(39, 39, 39);
 }
@@ -191,14 +208,17 @@ th {
 #dark .heading_reg{
   color: white;
 }
+#dark .homeh1{
+  color: rgb(228, 25, 25);
+}
 .default_card {
   background-color: white;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
   border-bottom: solid 4px #0a0a09;
   width: 620px;
   height: 748px;
-  margin-left: 852px;
-  margin-top: 100px;
+  /* margin-left: 852px; */
+  margin-top: 0px;
   border-radius: 15px;
   box-shadow: 0 10px 8px 0 rgba(29, 28, 28, 0.2),
     0 6px 30px 0 rgba(0, 0, 0, 0.19);
@@ -289,16 +309,21 @@ color: rgb(189, 44, 44);
 }
 .toggle_switch{
   margin-right: 2451px;
-  width: 50px                                                                                 ;
+  /* width: 50px; */
+  font-size: 30px;
+  color: white
+                                                                                 ;
 }
 /* .toggle_switch label{
   margin:10px
 } */
 #dark .switch_font{
   color: white;
+
 }
-#light .switch_font{
+#lightmode .switch_font{
   color: rgb(3, 3, 3);
+
 }
 #dark .input{
     width: 300px;
@@ -309,4 +334,5 @@ color: rgb(189, 44, 44);
     padding: 30px;
     box-shadow: 0 4px 8px 0 rgb(231 220 220 / 41%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     font-size: 20px;
+    color:white
 }

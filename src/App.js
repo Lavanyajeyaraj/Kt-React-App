@@ -14,8 +14,10 @@ import Typography from "@material-ui/core/Typography";
 // import TableCell from "@material-ui/core/TableCell";
 import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { createContext } from "react";
-import ReactSwitch from "react-switch";
+// import { createContext } from "react";
+// import ReactSwitch from "react-switch";
+import { ThemeContext} from "./Layout";
+import { useContext } from "react";
 
 // import Button from "@material-ui/core/Button";
 // import CardActions from "@material-ui/core/CardActions";
@@ -24,26 +26,31 @@ import ReactSwitch from "react-switch";
 // function formatOurData(columnName, semOneMarks) {
 //   return { columnName, semOneMarks };
 // }
+// export const ThemeContext = createContext(null);
 
-export const ThemeContext = createContext(null);
 
 function App() {
   const [inputs, setInputs] = useState({});
   const [message, setMessage] = useState("");
   const [{ items }, setItems] = useState({ items: [] });
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
+  // console.log(ThemeContext)
+
+  const theme = useContext(ThemeContext);
 
   const navigate = useNavigate();
   const reset_inp = useRef(null);
 
-  const toggle_theme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
+  // const toggle_theme = () => {
+  //   setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  //   console.log(theme);
+  //   localStorage.setItem("theme", JSON.stringify(theme));
+  // };
   const toComponentB = () => {
-    navigate("/users2", { state: { id: 1, name: "sabaoon" } });
+    navigate("/users2", { state: { id: 1, name: "Lavyy" } });
   };
   const toComponentc = () => {
-    navigate("/users3", { state: { id: 1, name: "sabaoon" } });
+    navigate("/users3", { state: { id: 1, name: "Lavyy" } });
   };
   const [data, setData] = useState([]);
   const getData = () => {
@@ -119,7 +126,7 @@ function App() {
           <div onClick={card_show} id="x">
             <Card className="card">
               <CardContent>
-                <div style={{ fontSize: 60, marginLeft: 250, marginTop: -62 }}>
+                <div style={{ fontSize: 60, marginLeft: 250, marginTop: -62, color:"white"}}>
                   <FaUserCircle />
                 </div>
                 <Typography variant="h5" component="h2" className="padding1">
@@ -145,7 +152,7 @@ function App() {
 
     // });
     function card_show(e) {
-      var A = e.target.innerText;
+      // var A = e.target.innerText;
       const default_data = new Object();
       default_data.firstName = inputs.firstname;
       default_data.lastName = inputs.lastname;
@@ -172,12 +179,15 @@ function App() {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggle_theme }}>
-      <div className="App-header" id={theme}>
-        <div className="toggle_switch">
-      <div className="switch_font" >{theme === "light" ? "LightMode":"Darkmode"}</div><br></br>
+    
+      <div className="App-header" id={theme.theme}>
+        {/* <div className="toggle_switch">
+          <div className="switch_font">
+            {theme === "light" ? "LightMode" : "Darkmode"}
+          </div>
+          <br></br>
           <ReactSwitch onChange={toggle_theme} checked={theme === "light"} />
-        </div>
+        </div> */}
 
         <div className="main_div" id="form_div">
           <form name="emp_form" id="newForm" ref={reset_inp}>
@@ -216,7 +226,7 @@ function App() {
             <div className="font">
               <b>Employee-Id</b>
               <input
-                style={{ marginLeft: "131px" }}
+                style={{ marginLeft: "120px" }}
                 type="text"
                 placeholder="EmployeeId"
                 className="input"
@@ -255,7 +265,7 @@ function App() {
             <div className="font">
               <b>Phone Number</b>
               <input
-                style={{ marginLeft: "107px" }}
+                style={{ marginLeft: "99px" }}
                 type="text"
                 placeholder="Contact number"
                 className="input"
@@ -295,7 +305,7 @@ function App() {
 
         <p className="message">{message}</p>
       </div>
-    </ThemeContext.Provider>
+  
   );
 
   function default_append() {
