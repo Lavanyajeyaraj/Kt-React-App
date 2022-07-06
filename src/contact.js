@@ -12,7 +12,7 @@ const Contact = () => {
   // const [theme, setTheme] = useState("lightmode");
 
   return (
-    <div className="App-header" id={theme.theme} style={{minHeight:970}}>
+    <div className="App-header" id={theme.theme} style={{minHeight:670}}>
       <h1>Contact us</h1>
     </div>
   );

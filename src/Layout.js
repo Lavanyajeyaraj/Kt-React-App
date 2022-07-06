@@ -27,7 +27,7 @@ const Layout = () => {
     <>
       <ThemeContext.Provider value={{ theme, toggle_theme }}>
         <nav>
-          <ul style={{ fontSize: 35 }}>
+          <ul style={{ fontSize: 23}}>
             <li>
               <Link to="/home1" class="active">
                 Home
@@ -40,6 +40,9 @@ const Layout = () => {
 
             <li>
               <Link to="/contact1">Conatct Us</Link>
+            </li>
+            <li>
+              <Link to="/table1">Table</Link>
             </li>
             <li>
               <div className="toggle_switch">

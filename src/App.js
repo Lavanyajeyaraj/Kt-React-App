@@ -7,6 +7,8 @@ import Mainuser from "./mainuser";
 import { Routes, Route } from "react-router-dom";
 import ComponentB from "./new";
 import ComponentC from "./new2";
+import Table from "./table";
+
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="contact1" element={<Contact />} />
             <Route path="/users2" element={<ComponentB />} />
             <Route path="/users3" element={<ComponentC />} />
+            <Route path="/table1" element={<Table />} />
+
           </Route>
         </Routes>
       </div>

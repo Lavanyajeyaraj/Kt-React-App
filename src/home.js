@@ -5,7 +5,7 @@ const Home = () => {
   const theme = useContext(ThemeContext);
   console.log(theme.theme);
   return (
-    <div className="App-header" id={theme.theme} style={{ minHeight: 970 }}>
+    <div className="App-header" id={theme.theme} style={{minHeight:670}}>
       <h1>Home Page</h1>
     </div>
   );

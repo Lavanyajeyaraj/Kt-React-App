@@ -192,7 +192,7 @@ function Mainuser() {
             <b>First Name</b>
             <input
               id="inp_1"
-              style={{ marginLeft: "138px" }}
+              style={{ marginLeft: "112px" }}
               type="text"
               placeholder="First Name"
               className="input"
@@ -201,7 +201,7 @@ function Mainuser() {
               onChange={handleChange}
             />
 
-            <div style={{ marginLeft: "250px" }}>
+            <div style={{ marginLeft: "116px" }}>
               <span id="err_msg1" style={{ color: "red" }}></span>
             </div>
           </div>
@@ -209,7 +209,7 @@ function Mainuser() {
           <div className="font">
             <b>Last Name</b>
             <input
-              style={{ marginLeft: "140px" }}
+              style={{ marginLeft: "116px" }}
               type="text"
               placeholder="Lastname"
               className="input"
@@ -222,7 +222,7 @@ function Mainuser() {
           <div className="font">
             <b>Employee-Id</b>
             <input
-              style={{ marginLeft: "120px" }}
+              style={{ marginLeft: "104px" }}
               type="text"
               placeholder="EmployeeId"
               className="input"
@@ -235,7 +235,7 @@ function Mainuser() {
           <div className="font">
             <b>Age</b>
             <input
-              style={{ marginLeft: "216px" }}
+              style={{ marginLeft: "182px" }}
               type="text"
               placeholder="Age"
               className="input"
@@ -248,7 +248,7 @@ function Mainuser() {
           <div className="font">
             <b>Domain</b>
             <input
-              style={{ marginLeft: "175px" }}
+              style={{ marginLeft: "150px" }}
               type="text"
               placeholder="Domain"
               className="input"
@@ -261,7 +261,7 @@ function Mainuser() {
           <div className="font">
             <b>Phone Number</b>
             <input
-              style={{ marginLeft: "99px" }}
+              style={{ marginLeft: "89px" }}
               type="text"
               placeholder="Contact number"
               className="input"
@@ -274,7 +274,7 @@ function Mainuser() {
           <div className="font">
             <b>Email-id</b>
             <input
-              style={{ marginLeft: "171px" }}
+              style={{ marginLeft: "143px" }}
               type="text"
               placeholder="email"
               className="input"
@@ -317,7 +317,7 @@ function Mainuser() {
               <div id="default_div">
                 <Card className="card" onClick={default_show}>
                   <CardContent>
-                    <div style={{ fontSize: 60, marginLeft: 250 }}>
+                    <div style={{ fontSize: 60, marginLeft: 144 }}>
                       <FaUserCircle />
                     </div>
                     <Typography
