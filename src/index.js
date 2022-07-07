@@ -4,6 +4,10 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
+import 'react-calendar/dist/Calendar.css';
+import "react-big-calendar/lib/css/react-big-calendar.css";
+// import 'react-big-calendar/lib/sass/styles';
+
 
 // 
 

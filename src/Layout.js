@@ -29,7 +29,7 @@ const Layout = () => {
         <nav>
           <ul style={{ fontSize: 23}}>
             <li>
-              <Link to="/home1" class="active">
+              <Link to="/home1" className="active">
                 Home
               </Link>
             </li>
@@ -43,6 +43,9 @@ const Layout = () => {
             </li>
             <li>
               <Link to="/table1">Table</Link>
+            </li>
+            <li>
+              <Link to="/calender1">Calender</Link>
             </li>
             <li>
               <div className="toggle_switch">

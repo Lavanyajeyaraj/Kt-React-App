@@ -8,12 +8,14 @@ import { Routes, Route } from "react-router-dom";
 import ComponentB from "./new";
 import ComponentC from "./new2";
 import Table from "./table";
+import Calender from "./calender";
+
 
 
 function App() {
   return (
     <>
-      <div >
+      <div >  
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="home1" element={<Home />} />
@@ -22,6 +24,8 @@ function App() {
             <Route path="/users2" element={<ComponentB />} />
             <Route path="/users3" element={<ComponentC />} />
             <Route path="/table1" element={<Table />} />
+            <Route path="/calender1" element={<Calender />} />
+
 
           </Route>
         </Routes>
