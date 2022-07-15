@@ -9,6 +9,11 @@ import ComponentB from "./new";
 import ComponentC from "./new2";
 import Table from "./table";
 import Calender from "./calender";
+import Crud from "./crud";
+import CrudForm from "./crud_form";
+import CrudUpdate from "./crud_update";
+
+
 
 
 
@@ -25,6 +30,10 @@ function App() {
             <Route path="/users3" element={<ComponentC />} />
             <Route path="/table1" element={<Table />} />
             <Route path="/calender1" element={<Calender />} />
+            <Route path="/crud1" element={<Crud />} />
+            <Route path="/crud2" element={<CrudForm />} />
+            <Route path="/crud-update" element={<CrudUpdate />} />
+
 
 
           </Route>

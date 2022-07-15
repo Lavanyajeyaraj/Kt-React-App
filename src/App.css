@@ -163,7 +163,7 @@ th {
   background-color: #dff3f7;
 }
 #lightmode {
-  background-color: #edf5f7;
+  background-color: white;
   color: black;
 }
 #dark {
@@ -322,10 +322,24 @@ li a.active {
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
   font-size: 13px;
 }
-.css-hyum1k-MuiToolbar-root {
-  min-height: 64px;
-  background-color: #bde7f3;
+#lightmode .css-1ygcj2i-MuiTableCell-root  {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solidrgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #61bf7d!important;
 }
+#lightmode .css-hbtnrh-MuiTableCell-root {
+  background-color: #61bf7d!important;
+}
+
 #dark .css-hyum1k-MuiToolbar-root{
   background-color: #525454;
   color: white;
@@ -380,3 +394,38 @@ li a.active {
 #dark .rbc-event, .rbc-day-slot .rbc-background-event{
   background-color: #1f1f20;;
 }
+.crud_div{
+  border-radius: 5px;
+  background-color: white;
+  padding: 80px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.crud_input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#lightmode .css-1w1rijm-MuiButtonBase-root-MuiButton-root {
+  color:white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: none;
+}
+.case-details{
+  max-width: 100%;
+  min-height: 100px;
+  background-color: white;
+  margin: 18px auto;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: larger;
+  color: black;
+  /* display: inline-block; */
+  display:inline-flex
+}
+  

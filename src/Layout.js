@@ -48,6 +48,9 @@ const Layout = () => {
               <Link to="/calender1">Calender</Link>
             </li>
             <li>
+              <Link to="/crud1">Repository</Link>
+            </li>
+            <li>
               <div className="toggle_switch">
                 <div className="switch_font">
                   {theme === "lightmode" ? "LightMode" : "Darkmode"}
