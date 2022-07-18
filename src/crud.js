@@ -5,18 +5,22 @@ import { ThemeContext } from "./Layout";
 import "./App.css";
 import { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-var count=0;
+var count = 0;
 
 const Table = () => {
-  // window.location.reload()
   const theme = useContext(ThemeContext);
 
-  const location = useLocation();
+  //   location.reload()
 
   const [inputs, setInputs] = useState([]);
-  const navigate = useNavigate();
-  const columns = ["ID", "Name", "count", "createdby", "priority"];
+  const [refreshKey, setRefreshKey] = useState(0);
 
+  const navigate = useNavigate();
+
+  const columns = ["ID", "Name", "count", "createdby", "priority"];
+  const refreshPage = () => {
+    //    window.location.reload(true)
+  };
   const options = {
     filterType: "checkbox",
     onRowClick: (rowData, rowState) => {
@@ -49,6 +53,10 @@ const Table = () => {
     },
   };
 
+  //   useEffect(() => {
+  //    refreshPage() ;
+  //   }, []);
+
   const getData = () => {
     fetch(`http://172.20.8.250:5000/get_TableData?=all`, {
       method: "GET",
@@ -58,7 +66,7 @@ const Table = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("data", data);
+        console.log(data)
         setInputs(data);
       })
       .catch((err) => {
@@ -67,9 +75,9 @@ const Table = () => {
   };
   useEffect(() => {
     getData();
+    // window.location.href("/crud1")
   }, []);
-  // console.log(inputs[inputs.length-1].count)
-  console.log(inputs)
+
   const data = inputs;
 
   return (
@@ -79,6 +87,7 @@ const Table = () => {
         minHeight: 33,
         alignItems: "normal",
         justifyContent: "initial",
+        paddingTop:0
       }}
       id={theme.theme}
     >
@@ -97,8 +106,10 @@ const Table = () => {
   );
 
   function Add_new() {
-    // console.log(inputs)
-    navigate("/crud2",{ state: { id: 0,count: count++ } });
+    console.log(inputs)
+  var Alt_ID= inputs.map(value => value.ID);
+  console.log(Alt_ID)
+    navigate("/crud2", { state: { id: 0, count: count++,ID:Alt_ID } });
   }
 };
 export default Table;

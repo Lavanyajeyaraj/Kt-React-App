@@ -408,6 +408,7 @@ li a.active {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  outline: none;
 }
 #lightmode .css-1w1rijm-MuiButtonBase-root-MuiButton-root {
   color:white;

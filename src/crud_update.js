@@ -1,13 +1,13 @@
 import React from "react";
-import CrudForm from "./crud_form.js";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./App.css";
+
 const CrudUpdate = () => {
   const [inputs, setInputs] = useState("");
   const [Update_inputs, set_updatedInputs] = useState([]);
-  const [Id,set_id]=useState({})
-
+  const navigate = useNavigate();
+    
   const handle_input = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -27,7 +27,74 @@ const CrudUpdate = () => {
   useEffect(() => {
     set_data();
   }, []);
+  const refreshPage = () => {
+    navigate(0);
+}
   console.log(Update_inputs);
+
+  function update(event) {
+    event.preventDefault();
+    var A = inputs[1];
+    var patch_object = {
+      ID: inputs[0],
+      Name: inputs[1],
+      count: inputs[2],
+      createdby: inputs[3],
+      priority: inputs[4],
+    };
+    console.log(patch_object);
+    var obj = {};
+    var count_data = location.state.count;
+
+    var index = { count: count_data };
+    obj = { ...obj, ...index };
+    console.log(patch_object.Name);
+    obj = { ...obj, ...Update_inputs };
+    console.log(inputs[0]);
+    var ID = patch_object.ID;
+    
+    fetch(`http://172.20.8.250:5000/get_updatedTableData?=all`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("data", data);
+          // setInputs(data);
+          var result = data.find(item => item.ID === inputs[0])
+          console.log(result._id)
+          // console.log(result)
+       
+  
+        let queryString1 = {_id:result._id , in_update: Update_inputs}
+        let query=JSON.stringify(queryString1)
+        
+        console.log(query)
+    
+        fetch("http://172.20.8.250:5000/updateData", {
+                method: "POST",
+                body:query,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              window.location.reload()
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  navigate("/crud1")
+
+    }
 
   return (
     <div
@@ -171,66 +238,7 @@ const CrudUpdate = () => {
       {/* <Table/> */}
     </div>
   );
-  function update(event) {
-    event.preventDefault();
-    var A = inputs[1];
-    var patch_object = {
-      ID: inputs[0],
-      Name: inputs[1],
-      count: inputs[2],
-      createdby: inputs[3],
-      priority: inputs[4],
-    };
-    console.log(patch_object);
-    var obj = {};
-    var count_data = location.state.count;
-
-    var index = { count: count_data };
-    obj = { ...obj, ...index };
-    console.log(patch_object.Name);
-    obj = { ...obj, ...Update_inputs };
-    console.log(inputs[0]);
-    var ID = patch_object.ID;
-    
-    fetch(`http://172.20.8.250:5000/get_updatedTableData?=all`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("data", data);
-          // setInputs(data);
-          var result = data.find(item => item.ID === inputs[0])
-          console.log(result._id)
-          // console.log(result)
-       
-  
-        let queryString1 = {_id:result._id , in_update: Update_inputs}
-        let query=JSON.stringify(queryString1)
-        
-        console.log(query)
-    
-        fetch("http://172.20.8.250:5000/updateData", {
-                method: "POST",
-                body:query,
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            })
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-            })
-            .catch((err) => {
-                console.error(err);
-            });
-  })
-  .catch((err) => {
-    console.error(err);
-  })
-    }
+ 
 };
 
 export default CrudUpdate;
