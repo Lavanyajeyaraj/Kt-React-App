@@ -12,15 +12,12 @@ import Calender from "./calender";
 import Crud from "./crud";
 import CrudForm from "./crud_form";
 import CrudUpdate from "./crud_update";
-
-
-
-
+import TreeView from "./treeview";
 
 function App() {
   return (
     <>
-      <div >  
+      <div>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="home1" element={<Home />} />
@@ -33,9 +30,7 @@ function App() {
             <Route path="/crud1" element={<Crud />} />
             <Route path="/crud2" element={<CrudForm />} />
             <Route path="/crud-update" element={<CrudUpdate />} />
-
-
-
+            <Route path="/treeview" element={<TreeView />} />
           </Route>
         </Routes>
       </div>

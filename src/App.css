@@ -397,7 +397,7 @@ li a.active {
 .crud_div{
   border-radius: 5px;
   background-color: white;
-  padding: 80px;
+  padding: 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .crud_input{
@@ -429,4 +429,65 @@ li a.active {
   /* display: inline-block; */
   display:inline-flex
 }
-  
+.crud_label{
+  display: inline-block;
+  width: 23.1em;
+  margin-right: .5em;
+  padding-bottom: 0.5em; 
+}
+.flex-container {
+  display: flex;
+  /* padding:30px */
+  padding: 20px;
+}
+
+
+
+.treediv_1 {
+    /* flex: 1; */
+    /* border: 2px solid yellow; */
+    border-radius: 5px;
+    background-color: white;
+    padding-bottom: 254px;
+    padding-right: 0px;
+    padding-top: 0px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    margin-left: 15px;
+}
+
+
+.treediv_2 {
+  border-radius: 5px;
+  background-color: white;
+  padding: 50px;
+  padding-right: 6%;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.css-11mde6h-MuiPaper-root {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 4px;
+  width: 1517px;
+}
+.FolderTree{
+  padding-top: 30px;
+  font-size: 18px;
+}
+
+.FolderTree .TreeNode .iconContainer svg {
+  padding-top: 50px;
+  vertical-align: text-top;
+  color: steelblue;
+  padding: 20px 0px;
+
+
+}
+.tree_inventory{
+  background-color: #04aa6d;
+  height: 42px;
+  width: 280px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+
+}
