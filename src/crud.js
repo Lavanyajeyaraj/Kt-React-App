@@ -17,14 +17,61 @@ const Table = () => {
 
   const navigate = useNavigate();
 
-  const columns = ["ID", "Name", "count", "createdby", "priority"];
+ const columns = [
+    {
+     name: "ID",
+     label: "ID",
+     options: {
+      filter: true,
+      sort: true,
+     }
+    },
+    {
+     name: "Name",
+     label: "Name",
+     options: {
+      filter: true,
+      sort: false,
+      customBodyRender: (rowData)=><div style={{color:"blue",cursor:"pointer"}}><a>{rowData}</a></div>
+     }
+    },
+   
+    {
+     name: "count",
+     label: "Count",
+     options: {
+      filter: true,
+      sort: false,
+     }
+    },
+    {
+      name: "priority",
+      label: "Priority",
+      options: {
+       filter: true,
+       sort: false,
+      }
+     },
+     {
+      name: "createdby",
+      label: "Created by",
+      options: {
+       filter: true,
+       sort: false,
+      }
+     },
+   ]
 
   const options = {
     filterType: "checkbox",
-    onRowClick: (rowData, rowState) => {
-      console.log(rowData, rowState);
-      navigate("/crud-update", { state: { id: 0, data: rowData } });
-    },
+    // render:(rowData)=><div style={{color:"red"}}>{rowData.ID}</div>,
+    render:(rowData)=>console.log(rowData),
+
+
+    // onRowClick: (rowData, rowState) => {
+    //   console.log(rowData, rowState);
+    //   navigate("/crud-update", { state: { id: 0, data: rowData } });
+    // },
     onRowsDelete: (rowsDeleted, dataRows) => {
       console.log(rowsDeleted.data[0].index);
       var data_delete = rowsDeleted.data[0].index;
@@ -75,32 +122,29 @@ const Table = () => {
     getData();
     // window.location.href("/crud1")
   }, []);
+  console.log(inputs)
 
   const data = inputs;
+  // const data = [
+  //   { name: "Joe James", company: "Test Corp", city: "Yonkers", state: "NY" },
+  //   { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
+  //   { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
+  //   { name: "James Houston", company: "Test Corp", city: "Dallas", state: "TX" },
+  //  ];
 
   return (
     <div
-      // className="App-header"
-      // style={{
-      //   minHeight: 33,
-      //   alignItems: "normal",
-      //   justifyContent: "initial",
-      //   paddingTop:0
-      // }}
+     
         className="flex-container"
 
       id={theme.theme}
     >
-      {/* <div className="treediv_1 "> */}
 
-{/* </div> */}
       <MUIDataTable
         title={""}
         data={data}
         columns={columns}
         options={options}
-        
-      
       />
       <div onClick={Add_new} style={{ textAlign: "right", cursor: "pointer" }}>
         <h1>+</h1>

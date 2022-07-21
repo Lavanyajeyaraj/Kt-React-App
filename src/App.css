@@ -324,8 +324,8 @@ li a.active {
 }
 #lightmode .css-1ygcj2i-MuiTableCell-root  {
   font-family: "Roboto","Helvetica","Arial",sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 600;
+  font-size: 1.15rem;
   line-height: 1.5rem;
   letter-spacing: 0.01071em;
   display: table-cell;
@@ -333,7 +333,7 @@ li a.active {
   border-bottom: 1px solidrgba(224, 224, 224, 1);
   text-align: left;
   padding: 16px;
-  color: rgba(0, 0, 0, 0.87);
+  color: white;
   background-color: #61bf7d!important;
 }
 #lightmode .css-hbtnrh-MuiTableCell-root {
@@ -448,7 +448,7 @@ li a.active {
     /* border: 2px solid yellow; */
     border-radius: 5px;
     background-color: white;
-    padding-bottom: 254px;
+    padding-bottom: 314px;
     padding-right: 0px;
     padding-top: 0px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
@@ -459,8 +459,9 @@ li a.active {
 .treediv_2 {
   border-radius: 5px;
   background-color: white;
-  padding: 50px;
+  padding: 16px;
   padding-right: 6%;
+  padding-top: 40px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 .css-11mde6h-MuiPaper-root {
@@ -468,6 +469,8 @@ li a.active {
   color: rgba(0, 0, 0, 0.87);
   border-radius: 4px;
   width: 1517px;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%);
+  font-size: 20px;
 }
 .FolderTree{
   padding-top: 30px;
@@ -490,4 +493,25 @@ li a.active {
   font-size: 24px;
   color: white;
 
+}
+.tss-1qtl85h-MUIDataTableBodyCell-root  .tss-1vd39vz-MUIDataTableBodyCell-stackedCommon{
+  font-size: 18px;
+}
+#lightmode.css-1ygcj2i-MuiTableCell-root {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01071em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1pxsolidrgba(224, 224, 224, 1);
+  text-align: left;
+  padding: 16px;
+  color: rgba(251, 247, 247, 0.87);
+  background: #61bf7d!important;
+}
+.css-hbtnrh-MuiTableCell-root {
+
+  background-color:#61bf7d!important; 
 }
